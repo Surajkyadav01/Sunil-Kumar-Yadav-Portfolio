@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', 'Inter', "Segoe UI", sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-neon-blue: #00aaff;
+  --color-neon-green: #00ffaa;
+  --color-coral-red: #ff6b6b;
+  --color-purple-accent: #8b5cf6;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px var(--color-neon-blue);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--color-neon-blue);
+  }
+  100% {
+    box-shadow: 0 0 35px var(--color-neon-blue);
+  }
+}
+
+.profile-img-glow {
+  animation: glow 2s infinite alternate;
+}
+
+/* Custom styles for matching the original visuals */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Glass card styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 170, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+  background: rgba(0, 170, 255, 0.08);
+  border-color: var(--color-neon-blue);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 170, 255, 0.5);
+}
+
+/* Light mode overrides inside CSS since body can toggle classes */
+body.light-mode {
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  background-attachment: fixed;
+  color: #1e293b;
+}
+
+body.light-mode .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(0, 170, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .glass-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #0088cc;
+  box-shadow: 0 10px 25px rgba(0, 136, 204, 0.2);
+}
+
+body.light-mode .aquarium-container {
+  border-color: #0088cc;
+}
+
+/* Custom modal zoom animation */
+.zoom-anim {
+  animation: modalZoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalZoom {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

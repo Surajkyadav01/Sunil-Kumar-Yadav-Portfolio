@@ -1,0 +1,6 @@
+{
+  "name": "Sunil Kumar Yadav Portfolio",
+  "description": "Fully interactive and custom-editable responsive portfolio website of Sunil Kumar Yadav, featuring live visitor updates, custom tool aquarium physics animation, and real-time visual admin editor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
