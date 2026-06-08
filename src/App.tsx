@@ -1,4 +1,5 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from "react";
+// Configured for seamless GitHub Actions auto-deployment to GitHub Pages
 import { 
   FileText, 
   Settings2, 
