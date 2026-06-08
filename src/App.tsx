@@ -1,5 +1,5 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from "react";
-// Configured for seamless GitHub Actions auto-deployment to GitHub Pages
+// Configured for seamless GitHub Actions auto-deployment to GitHub Pages - Sync Trigger V4
 import { 
   FileText, 
   Settings2, 
